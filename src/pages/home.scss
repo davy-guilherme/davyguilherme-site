@@ -1,0 +1,64 @@
+.home {
+
+    .top {
+        width: 100vw;
+        // min-height: 100vh;
+        padding: 32vh 0 32px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        header {
+            width: 90%;
+            max-width: 560px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            img {
+
+            }
+
+            .info {
+
+            }
+        }
+
+        .about {
+            width: 90%;
+            max-width: 560px;
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: justify;
+            
+        }
+    }
+
+
+    .projects, .experiences {
+        width: 100vw;
+        padding: 32px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        h2 {
+            width: 90%;
+            max-width: 560px;
+        }
+
+        .inner {
+            width: 90%;
+            max-width: 560px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        
+    }
+}
