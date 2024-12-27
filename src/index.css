@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #111111;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Inter", sans-serif;
+  background-color: #14534b;
   color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 * {

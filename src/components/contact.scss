@@ -1,0 +1,23 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 6px;
+
+    .label {
+        flex: 1;
+        
+    }
+
+    a {
+        flex: 3;
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+    }
+}

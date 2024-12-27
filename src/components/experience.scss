@@ -1,4 +1,65 @@
 .experience {
     width: 100%;
     max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .date {
+        font-size: 12px;
+        padding-top: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        h4 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 14px;
+        }
+
+        .tags {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            span {
+                padding: 4px 8px;
+                font-size: 12px;
+                background-color: #fff;
+                color: #14534b;
+                border-radius: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .experience {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    
+        .date {
+            flex: 1;
+        }
+    
+        .info {
+            flex: 3;
+        }
+    }
+
 }
