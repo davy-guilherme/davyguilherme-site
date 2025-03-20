@@ -1,0 +1,55 @@
+{
+    "about": "I have extensive experience in developing and maintaining websites, primarily using PHP. Recently, I have been deepening my knowledge of JavaScript, especially with React, applying this technology to practical projects. In addition to web development, I have completed a technical course in electronics and am currently pursuing a degree in embedded systems at FATEC, expanding my skills to projects involving microcontrollers and the Internet of Things (IoT).",
+    "description": "Full Stack Web Developer and Maker",
+    "projects": {
+        "title" : "Projects",
+        "1": {
+            "name": "Beuty4Share",
+            "description": "Development of the website for the influencer school located in São Paulo.",
+            "year": "2018",
+            "status": "Completed"
+        },
+        "2": {
+            "name": "Scary Lamp",
+            "description": "I developed a voltage control device for lamps using electronic components, capable of simulating lighting effects typical of horror movies. To achieve this, I created a player in C++ with the QT library, allowing the adjustment of the light intensity of one or more lamps.",
+            "year": "2021",
+            "status": "Completed"
+        },
+        "4": {
+            "name": "Verdinho Vegano",
+            "description": "Development of the simplified contact page for the Verdinho Vegano restaurant.",
+            "year": "2023",
+            "status": "Completed"
+        },
+        "5": {
+            "name": "SBC Guia Online",
+            "description": "Development of an Online Business Directory for the city of São Bernardo do Campo.",
+            "year": "2024",
+            "status": "In progress"
+        },
+        "6": {
+            "name": "Gui Bazar",
+            "description": "Online marketplace for new, semi-new, and used products",
+            "year": "2024",
+            "status": "Completed"
+        }
+    },
+    "experiences": {
+        "title": "Experiences",
+        "1": {
+            "occupation": "Computer Instructor",
+            "description": "I taught basic computer courses and Web Development to young people and adults.",
+            "tags": "Office, Web Development"
+        },
+        "2": {
+            "occupation": "Web Developer",
+            "description": "Creation and maintenance of websites developed mainly in WordPress, using both commercial themes and custom themes created from scratch.",
+            "tags": "HTML, CSS, WordPress"
+        },
+        "3": {
+            "occupation": "Programmer Analyst",
+            "description": "I worked on the development and maintenance of institutional websites for notaries, lawyers, and notary associations, integrating projects through APIs when necessary.",
+            "tags": "PHP, Laravel, WordPress, API, SQL, JQuery"
+        }
+    }
+}

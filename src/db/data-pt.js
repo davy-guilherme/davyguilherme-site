@@ -6,54 +6,52 @@ import verdinho from '../assets/verdinho.jpg';
 import scaryLamp from '../assets/scary-prot.png';
 import guiBazar from '../assets/gui-bazar.png';
 
-// import { useTranslation } from "react-i18next";
-
-export const getExperiences = (t) => [
+export const experiences = [
     {   
         id: 1,
-        cargo: t("experiences.1.occupation"),
+        cargo: 'Instrutor de Informática',
         empresa: 'Evolutime',
         date: '01/2015 - 12/2016',
-        description: t("experiences.1.description"),
-        tags: t("experiences.1.tags"),
+        description: 'Ministrei cursos de informática básica e Desenvolvimento Web para jovens e adultos.',
+        tags: 'Office, Desenvolvimento Web',
         
     },
     {
         id: 2,
-        cargo: t("experiences.2.occupation"),
+        cargo: 'Desenvolvedor Web',
         empresa: 'Lamego MKT',
         date: '09/2017 - 06/2018',
-        description: t("experiences.2.description"),
-        tags: t("experiences.2.tags"),
+        description: 'Criação e manutenção de sites desenvolvidos principalmente em WordPress, utilizando tanto temas comerciais quanto temas personalizados criados do zero.',
+        tags: 'HTML, CSS, WordPress',
     },
     {
         id: 3,
-        cargo: t("experiences.3.occupation"),
+        cargo: 'Analista Programador',
         empresa: 'Infographya',
         date: '10/2021 - 07/2023',
-        description: t("experiences.3.description"),
-        tags: t("experiences.3.tags"),
+        description: 'Atuei no desenvolvimento e manutenção de sites institucionais para cartórios, advogados e associações de notários, realizando a integração de projetos por meio de APIs quando necessário.',
+        tags: 'PHP, Laravel, WordPress, API, SQL, JQuery'
     },
 ];
 
-export const getProjects = (t) => [
+export const projects = [
     {   
         id: 1,
-        name: t("projects.1.name"),
-        date: t("projects.1.year"),
-        description: t("projects.1.description"),
+        name: 'Beuty4Share',
+        date: '2018',
+        description: 'Desenlvimento do site da escola de influenciadores situada em São Paulo.',
         tags: 'HTML, CSS, jQuery, PHP, SQL, WordPress',
-        status: t("projects.1.status"),
+        status: 'Concluído',
         link: 'https://www.beauty4share.com.br/',
         image: b4s,
     },
     {
         id: 2,
-        name: t("projects.2.name"),
+        name: 'Scary Lamp',
         date: '2021',
-        description: t("projects.2.description"),
+        description: 'Desenvolvi um dispositivo de controle de tensão para lâmpadas, utilizando componentes eletrônicos, capaz de simular efeitos de iluminação típicos de filmes de terror. Para isso, criei um player em C++ com a biblioteca QT, que permite ajustar a intensidade da luz de uma ou mais lâmpadas.',
         tags: 'C++, QT, Arduino, Eletrônica',
-        status: t("projects.1.status"),
+        status: 'Concluído',
         link: 'https://www.youtube.com/watch?v=cO_zgKupF4Q',
         image: scaryLamp,
     },
@@ -69,31 +67,31 @@ export const getProjects = (t) => [
     // },
     {
         id: 4,
-        name: t("projects.4.name"),
+        name: 'Verdinho Vegano',
         date: '2023',
-        description: t("projects.4.description"),
+        description: 'Desenvolvimento da página de contatos simplificada para o restaurante Verdinho Vegano',
         tags: 'HTML, CSS, PHP, Javascript',
-        status: t("projects.4.status"),
+        status: 'Concluído',
         link: 'https://verdinhovegano.com.br',
         image: verdinho,
     },
     {
         id: 5,
-        name: t("projects.5.name"),
+        name: 'SBC Guia Online',
         date: '2024',
-        description: t("projects.5.description"),
+        description: 'Desenvolvimento de um Guia Comercial Online para a Cidade de São Bernardo do Campo.',
         tags: 'PHP, Laravel, Bootstrap',
-        status: t("projects.5.status"),
+        status: 'Andamento',
         link: 'https://sbcguia.online',
         image: null,
     },
     {
         id: 6,
-        name: t("projects.6.name"),
+        name: 'Gui Bazar',
         date: '2024',
-        description: t("projects.6.description"),
+        description: 'Bazar online de produtos novos, semi-novos e usados.',
         tags: 'HTML, CSS, PHP, WordPress, WooCommerce',
-        status: t("projects.6.status"),
+        status: 'Concluído',
         link: 'https://guibazar.com.br',
         image: guiBazar,
     },

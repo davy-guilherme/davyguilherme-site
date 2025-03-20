@@ -1,14 +1,109 @@
 import Experience from '../components/Experience';
 import Project from '../components/Project';
 import Contact from '../components/Contact.jsx';
-import {experiences, projects, contacts} from '../db/data.js';
+import {getExperiences, getProjects, contacts} from '../db/data.js';
 import { motion } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import DG from '../assets/davy-guilherme-sm.png';
 import './home.scss'
 
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+
 const HomePage = () => {
 
+    const { t } = useTranslation();
+    const anoAtual = new Date().getFullYear();
+
+    const projects = getProjects(t);
+    const experiences = getExperiences(t);
+
+    // useEffect(() => {
+    //     // Verifica o idioma do navegador antes de chamar a API
+    //     const browserLanguage = navigator.language.startsWith("pt") ? "pt" : "en";
+    //     console.log("Idioma do navegador detectado:", browserLanguage);
+    //     i18n.changeLanguage(browserLanguage); // Define o idioma inicial
+    
+    //     // Tenta detectar a localização do usuário via IP
+    //     fetch("https://ipapi.co/json/")
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             const countryCode = data.country_code;
+    //             const detectedLanguage = countryCode === "BR" ? "pt" : "en";
+    
+    //             console.log("Idioma detectado pela API:", detectedLanguage);
+    
+    //             if (detectedLanguage !== i18n.language) {
+    //                 i18n.changeLanguage(detectedLanguage);
+    //             }
+    //         })
+    //         .catch(() => {
+    //             console.warn("Falha ao detectar localização, mantendo idioma do navegador.");
+    //         });
+    // }, [i18n]);
+
+    //// -------
+
+
+    // useEffect(() => {
+    //     // Define inglês como padrão inicial
+    //     let defaultLanguage = "en";
+    
+    //     // Detecta o idioma do navegador (caso esteja disponível)
+    //     if (navigator.language) {
+    //         const browserLanguage = navigator.language.slice(0, 2); // Pega só "pt" ou "en", por exemplo
+    //         if (browserLanguage === "pt") {
+    //             defaultLanguage = "pt";
+    //         }
+    //     }
+    
+    //     console.log("Idioma do navegador detectado:", defaultLanguage);
+    
+    //     // Aplica o idioma padrão antes de chamar a API
+    //     i18n.changeLanguage(defaultLanguage);
+    
+    //     // Tenta detectar a localização do usuário via API
+    //     fetch("https://ipapi.co/json/")
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             const countryCode = data.country_code;
+    //             const detectedLanguage = countryCode === "BR" ? "pt" : "en";
+    
+    //             console.log("Idioma detectado pela API:", detectedLanguage);
+    //             i18n.changeLanguage(detectedLanguage);
+    //         })
+    //         .catch(() => {
+    //             console.warn("Falha ao detectar localização, usando inglês como fallback.");
+    //         });
+    // }, [i18n]);
+
+    useEffect(() => {
+        // Detecta o idioma do navegador
+        const browserLanguage = navigator.language || navigator.userLanguage; // userLanguage para compatibilidade
+        const langCode = browserLanguage ? browserLanguage.slice(0, 2) : "en"; // Garante um fallback
+        console.log("Idioma do navegador detectado:", langCode);
+    
+        // Assume inglês como padrão, mas mantém pt/en se detectado corretamente
+        const defaultLanguage = ["pt", "en"].includes(langCode) ? langCode : "en";
+        i18n.changeLanguage(defaultLanguage);
+    
+        // Tenta detectar o país via IP
+        fetch("https://ipapi.co/json/")
+            .then((res) => res.json())
+            .then((data) => {
+                const countryCode = data.country_code;
+                const detectedLanguage = countryCode === "BR" ? "pt" : "en"; // Sempre inglês como fallback
+    
+                console.log("Idioma detectado pela API:", detectedLanguage);
+                i18n.changeLanguage(detectedLanguage);
+            })
+            .catch(() => {
+                console.warn("Falha ao detectar localização, mantendo idioma do navegador.");
+            });
+    }, [i18n]);
+    
+    
     const animationVariants = {
         initial: {
             opacity: 0,
@@ -34,6 +129,9 @@ const HomePage = () => {
             transition: { duration: 2 },
         }
     }
+
+    console.log(projects[1]); // Deve imprimir "Verdinho Vegano"
+    // console.log(projects[5]); // Deve imprimir "SBC Guia Online"
     
     return (
         <div className="home">
@@ -62,11 +160,11 @@ const HomePage = () => {
                             {/* <img src={ DG } alt="Davy Guilherme" /> */}
                             <div className="info">
                                 <h1>Davy Guilherme</h1>
-                                <b>Desenvolvedor Web Full Stack e Maker</b>
+                                <b>{t("description")}</b>
                             </div>
                         </header>
                         <div className="about">
-                            <p>Possuo ampla experiência no desenvolvimento e manutenção de websites, utilizando principalmente PHP. Recentemente, estou aprofundando meus conhecimentos em JavaScript, especialmente com React, desenvolvendo projetos práticos para aplicar essa tecnologia de forma eficaz. Além disso, estou me dedicando ao estudo de eletrônica para adquirir habilidades em projetos envolvendo microcontroladores e Internet das Coisas (IoT).</p>
+                            <p>{t("about")}</p>
                         </div>
                     </motion.div>
                 )}
@@ -75,7 +173,7 @@ const HomePage = () => {
             </div>
 
             <div className="projects">
-                <h2>Projetos</h2>
+                <h2>{t("projects.title")}</h2>
                 <div className="inner">
                     {projects.sort((a, b) => b.id - a.id).map((project) => (
                         <Project key={project.id} project={project} />
@@ -85,7 +183,7 @@ const HomePage = () => {
 
 
             <div className="experiences">
-                <h2>Experiências</h2>
+                <h2>{t("experiences.title")}</h2>
                 <div className="inner">
                     {experiences.sort((a, b) => b.id - a.id).map((experience) => (
                         <Experience key={experience.id} experience={experience} />
@@ -103,7 +201,7 @@ const HomePage = () => {
             </div>
 
             <footer>
-                <p>&copy; 2024</p>
+                <p>&copy; {anoAtual}</p>
             </footer>
 
             

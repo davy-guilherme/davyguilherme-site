@@ -1,0 +1,55 @@
+{
+    "about": "Possuo ampla experiência no desenvolvimento e manutenção de websites, utilizando principalmente PHP. Recentemente, tenho aprofundado meus conhecimentos em JavaScript, especialmente com React, aplicando essa tecnologia em projetos práticos. Além do desenvolvimento web, concluí um curso técnico em eletrônica e atualmente curso uma graduação em sistemas embarcados na FATEC, expandindo minhas habilidades para projetos com microcontroladores e Internet das Coisas (IoT).",
+    "description": "Desenvolvedor Web Full Stack e Maker",
+    "projects": {
+        "title" : "Projetos",
+        "1": {
+            "name": "Beuty4Share",
+            "description": "Desenlvimento do site da escola de influenciadores situada em São Paulo.",
+            "year": "2018",
+            "status": "Concluído"
+        },
+        "2": {
+            "name": "Scary Lamp",
+            "description": "Desenvolvi um dispositivo de controle de tensão para lâmpadas, utilizando componentes eletrônicos, capaz de simular efeitos de iluminação típicos de filmes de terror. Para isso, criei um player em C++ com a biblioteca QT, que permite ajustar a intensidade da luz de uma ou mais lâmpadas.",
+            "year": "2021",
+            "status": "Concluído"
+        },
+        "4": {
+            "name": "Verdinho Vegano",
+            "description": "Desenvolvimento da página de contatos simplificada para o restaurante Verdinho Vegano.",
+            "year": "2023",
+            "status": "Concluído"
+        },
+        "5": {
+            "name": "SBC Guia Online",
+            "description": "Desenvolvimento de um Guia Comercial Online para a Cidade de São Bernardo do Campo.",
+            "year": "2024",
+            "status": "Andamento"
+        },
+        "6": {
+            "name": "Gui Bazar",
+            "description": "Bazar online de produtos novos, semi-novos e usados.",
+            "year": "2024",
+            "status": "Concluído"
+        }
+    },
+    "experiences": {
+        "title" : "Experiências",
+        "1": {
+            "occupation": "Instrutor de Informática",
+            "description": "Ministrei cursos de informática básica e Desenvolvimento Web para jovens e adultos.",
+            "tags": "Office, Desenvolvimento Web"
+        },
+        "2": {
+            "occupation": "Desenvolvedor Web",
+            "description": "Criação e manutenção de sites desenvolvidos principalmente em WordPress, utilizando tanto temas comerciais quanto temas personalizados criados do zero.",
+            "tags": "HTML, CSS, WordPress"
+        },
+        "3": {
+            "occupation": "Analista Programador",
+            "description": "Atuei no desenvolvimento e manutenção de sites institucionais para cartórios, advogados e associações de notários, realizando a integração de projetos por meio de APIs quando necessário.",
+            "tags": "PHP, Laravel, WordPress, API, SQL, JQuery"
+        }
+    }
+}
